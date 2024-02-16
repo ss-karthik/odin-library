@@ -24,7 +24,7 @@ function displayBooks() {
 		let container = document.createElement('div');
 		container.classList.add('card');
 		container.id = item.id;
-		let title = document.createElement('h1');
+		let title = document.createElement('h2');
 		let author = document.createElement('h2');
 		let pcount = document.createElement('h2');
 		let status = document.createElement('h2');
