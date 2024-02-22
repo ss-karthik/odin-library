@@ -1,20 +1,24 @@
 
 const myLibrary = [];
 
-function Book(title, author, pageCount, status) {
-	this.id = myLibrary.length;
-    this.title = title;
-    this.author = author;
-    this.pageCount = pageCount;
-    this.status = status;
-    this.changeStatus = function() {
+class Book {
+	constructor(title, author, pageCount, status) {
+		this.id = myLibrary.length;
+	    this.title = title;
+	    this.author = author;
+	    this.pageCount = pageCount;
+	    this.status = status;
+	}
+
+    changeStatus() {
         if (this.status == 1) {
         	this.status = 0;
         } else {
         	this.status = 1;
         }
-    }
+    }	
 }
+
 
 
 function displayBooks() {
@@ -60,8 +64,8 @@ function displayBooks() {
 }
 
 const addButton = document.querySelector('.new-book');
-const submitButton = document.querySelector('.submit-book');
 const dialog = document.querySelector("dialog");
+const submitButton = document.querySelector('.submit-book');
 
 const titleBox = document.getElementById('title');
 const authorBox = document.getElementById('author'); 
